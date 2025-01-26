@@ -1,9 +1,14 @@
 import { Tabs } from "expo-router";
 import React from "react";
 import { Platform } from "react-native";
-import { LayoutDashboard, FileClock, MapPin, House } from "lucide-react-native";
+import {
+  LayoutDashboard,
+  FileClock,
+  MapPin,
+  House,
+  CircleUser,
+} from "lucide-react-native";
 import { HapticTab } from "@/components/HapticTab";
-import { IconSymbol } from "@/components/ui/IconSymbol";
 import TabBarBackground from "@/components/ui/TabBarBackground";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
@@ -28,19 +33,19 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="index"
-        options={{
-          title: "Home",
-          tabBarIcon: ({ color }) => <House size={28} color={color} />,
-        }}
-      />
-      <Tabs.Screen
         name="dashboard"
         options={{
           title: "Dashboard",
           tabBarIcon: ({ color }) => (
             <LayoutDashboard size={28} color={color} />
           ),
+        }}
+      />
+      <Tabs.Screen
+        name="map"
+        options={{
+          title: "Map",
+          tabBarIcon: ({ color }) => <MapPin size={28} color={color} />,
         }}
       />
       <Tabs.Screen
@@ -51,10 +56,17 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="map"
+        name="history"
         options={{
-          title: "Map",
-          tabBarIcon: ({ color }) => <MapPin size={28} color={color} />,
+          title: "History",
+          tabBarIcon: ({ color }) => <FileClock size={28} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color }) => <CircleUser size={28} color={color} />,
         }}
       />
     </Tabs>
