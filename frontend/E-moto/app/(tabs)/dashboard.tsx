@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 const Dashboard = () => {
   return (
     <View>
-      <Text>Dashboard</Text>
+      <Text className="text-white">Dashboard</Text>
     </View>
   );
 };
