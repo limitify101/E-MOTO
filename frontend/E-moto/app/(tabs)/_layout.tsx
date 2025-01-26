@@ -45,16 +45,16 @@ export default function TabLayout() {
           ),
         }}
       />
-    <Tabs.Screen
-    name="history"
-    options={{
-      title: "History",
-      tabBarIcon: ({ color }) => (
-        <IconSymbol size={28} name="paperplane.fill" color={color} />
-      ),
-    }}
-  />
-<Tabs.Screen
+      <Tabs.Screen
+        name="history"
+        options={{
+          title: "History",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="paperplane.fill" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="map"
         options={{
           title: "Map",
